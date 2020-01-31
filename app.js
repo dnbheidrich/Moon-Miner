@@ -38,6 +38,11 @@ function moonClick(){
 }
 
 
+function addMod(){
+
+}
+
+
 
 function update(){
   cheeseCounterElem.innerHTML = cheese
@@ -48,7 +53,8 @@ function buyPickAxe(){
   if(clickUpgrades.pickaxes.price == cheese){
     cheese -= clickUpgrades.pickaxes.price
     clickUpgrades.pickaxes.price += 10
-    cheese += 5
+    
+
   }
 }
 function buySledge(){
