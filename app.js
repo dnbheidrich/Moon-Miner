@@ -1,5 +1,6 @@
 let cheese = 0;
 let cheeseCounterElem = document.getElementById("cheeseCounter")
+let totalMod = 0
 
 let clickUpgrades = {
   pickaxes: {
@@ -37,9 +38,8 @@ function moonClick(){
   
 }
 
-
 function addMod(){
-
+  
 }
 
 
@@ -50,26 +50,33 @@ function update(){
 
 
 function buyPickAxe(){
-  if(clickUpgrades.pickaxes.price == cheese){
+  if(clickUpgrades.pickaxes.price <= cheese){
     cheese -= clickUpgrades.pickaxes.price
     clickUpgrades.pickaxes.price += 10
     
     
+    
+  
+  }
+  
+}
+function buySledge(){
+  if(clickUpgrades.sledgehammmers.price <= cheese){
+    cheese -= clickUpgrades.sledgehammmers.price
+    clickUpgrades.sledgehammmers.price += 20
+  }
+}
+function buyRover(){
+  if(automaticUpgrades.rovers.price <= cheese){
+    cheese -= automaticUpgrades.rovers.price
+    automaticUpgrades.rovers.price += 20
 
   }
 }
-function buySledge(){
-  if(clickUpgrades.sledgehammmers.price == cheese){
-    cheese -= clickUpgrades.sledgehammmers.price
-    cheese += 10
-  }
-}function buyRover(){
-  if(automaticUpgrades.rovers.price == cheese){
-    cheese -=automaticUpgrades.rovers.price
-  }
-}function buyDrone(){
-  if(automaticUpgrades.drone.price == cheese){
+function buyDrone(){
+  if(automaticUpgrades.drone.price <= cheese){
     cheese -= automaticUpgrades.drone.price
+    automaticUpgrades.drone.price += 30
   }
 }
 
