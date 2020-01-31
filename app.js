@@ -54,6 +54,7 @@ function buyPickAxe(){
     cheese -= clickUpgrades.pickaxes.price
     clickUpgrades.pickaxes.price += 10
     
+    
 
   }
 }
