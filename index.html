@@ -13,22 +13,22 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <div class="row text-center">
+      <div class="container-fluid">
+        <div class="row text-center bg-dark">
           <div class="col-12">
             <h1>Moon Miner</h1>
           </div>
         </div>
       </div>
     </header>
-    <hr>
-    <div class="container">
+    <hr class="bg-dark">
+    <div class="container-fluid">
       <div class="row text-center">
         <div class="col-12"><i  id="moon" onclick="moonClick()" class="fas fa-moon fa-10x"></i></div>
       </div>
     </div>
     <hr>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row text-center">
         <div class="col-3"><button onclick="buyPickAxe()" id="pickAxe"  type="button" class="btn btn-primary">Pickaxe</button>
         </div>
@@ -41,9 +41,12 @@
       </div>
     </div>
     <hr>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row text-center">
-        <div class="col-12">
+        <div class="col-6">
+          <h2 id="multiplier">Multiplier</h2>
+        </div>
+        <div class="col-6">
           <h2 id = "cheeseCounter">Total Cheese</h2>
         </div>
       </div>
