@@ -15,9 +15,9 @@ let clickUpgrades = {
   },
 
   sledgehammmers: {
-    price: 50,
+    price: 150,
     quantity: 0,
-    multiplier: 3
+    multiplier: 5
   }
 };
 
