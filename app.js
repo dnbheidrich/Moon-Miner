@@ -63,6 +63,7 @@ function addMods(){
 function update(){
   cheeseCounterElem.innerHTML = moonTarget.cheese
   
+  
 
   
 }
@@ -104,7 +105,7 @@ function buyRover(){
   if(automaticUpgrades.rovers.price <= moonTarget.cheese){
     moonTarget.item.push(automaticUpgrades.rovers)
     moonTarget.cheese -= automaticUpgrades.rovers.price
-    automaticUpgrades.rovers.price += 20
+    automaticUpgrades.rovers.price += 30
     setInterval(() => {
       moonTarget.cheese += automaticUpgrades.drone.multiplier
       update()
@@ -117,7 +118,7 @@ function buyRover(){
 function buyDrone(){
   if(automaticUpgrades.drone.price <= moonTarget.cheese){
     moonTarget.cheese -= automaticUpgrades.drone.price
-    automaticUpgrades.drone.price += 30
+    automaticUpgrades.drone.price += 40
     update()
     moonTarget.item.push(automaticUpgrades.drone)
     setInterval(() => {
