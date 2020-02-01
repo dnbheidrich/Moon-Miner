@@ -63,6 +63,8 @@ function addMods(){
 function update(){
   cheeseCounterElem.innerHTML = moonTarget.cheese
   
+
+  
 }
 
 
