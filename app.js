@@ -63,9 +63,9 @@ function addMods(){
 function update(){
   // help fix pls
   let pickAxePriceElem = document.getElementById("axePrice")
-  let pickAxePriceElem = document.getElementById("hammerPrice")
-  let pickAxePriceElem = document.getElementById("roverPrice")
-  let pickAxePriceElem = document.getElementById("dronePrice")
+  let sledgehammerPriceElem = document.getElementById("hammerPrice")
+  let roverPriceElem = document.getElementById("roverPrice")
+  let dronePriceElem = document.getElementById("dronePrice")
 let pickAxeMultiplier = document.getElementById("axeMod")
 let sledgeMultiplier = document.getElementById("sledgeMod")
 let roverMultiplier = document.getElementById("roverMod")
