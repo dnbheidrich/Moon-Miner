@@ -2,7 +2,7 @@ let moonTarget ={
  cheese : 0,
  item: [],
 }
-
+let pickAxePriceElem = document.getElementById("axePrice")
 let pickAxeMultiplier = document.getElementById("axeMod")
 let sledgeMultiplier = document.getElementById("sledgeMod")
 let roverMultiplier = document.getElementById("roverMod")
@@ -17,13 +17,13 @@ let totalModifier = 1;
 
 let clickUpgrades = {
   pickaxes: {
-    price: 10,
+    price: 50,
     quantity: 0,
     multiplier: 1
   },
 
   sledgehammmers: {
-    price: 10,
+    price: 100,
     quantity: 0,
     multiplier: 5
   }
@@ -31,13 +31,13 @@ let clickUpgrades = {
 
 let automaticUpgrades = {
   rovers: {
-    price: 10,
+    price: 200,
     quantity: 0,
     multiplier: 20
   },
 
   drone: {
-    price: 200,
+    price: 350,
     quantity: 0,
     multiplier: 30
   }
@@ -80,7 +80,7 @@ function update(){
   sledgeMultiplier.innerText = clickUpgrades.sledgehammmers.multiplier
   droneMultiplier.innerText = automaticUpgrades.drone.multiplier
   roverMultiplier.innerText = automaticUpgrades.rovers.multiplier
-  
+  pickAxePriceElem.innerText = clickUpgrades.pickaxes.price
   
 
   
@@ -126,7 +126,7 @@ function buyRover(){
     automaticUpgrades.rovers.quantity++
     moonTarget.item.push(automaticUpgrades.rovers)
     moonTarget.cheese -= automaticUpgrades.rovers.price
-    automaticUpgrades.rovers.price += 30
+    automaticUpgrades.rovers.price += 50
     setInterval(() => {
       moonTarget.cheese += automaticUpgrades.drone.multiplier
       update()
@@ -140,7 +140,7 @@ function buyDrone(){
   if(automaticUpgrades.drone.price <= moonTarget.cheese){
     automaticUpgrades.drone.quantity++
     moonTarget.cheese -= automaticUpgrades.drone.price
-    automaticUpgrades.drone.price += 40
+    automaticUpgrades.drone.price += 100
     update()
     moonTarget.item.push(automaticUpgrades.drone)
     setInterval(() => {
