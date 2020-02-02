@@ -2,17 +2,6 @@ let moonTarget ={
  cheese : 0,
  item: [],
 }
-let pickAxePriceElem = document.getElementById("axePrice")
-let pickAxeMultiplier = document.getElementById("axeMod")
-let sledgeMultiplier = document.getElementById("sledgeMod")
-let roverMultiplier = document.getElementById("roverMod")
-let droneMultiplier = document.getElementById("droneMod")
-let pickaxeCounterElem = document.getElementById("pickAxeCounter")
-let sledgeCounterElem = document.getElementById("sledgeCounter")
-let roverCounterElem = document.getElementById("roverCounter")
-let droneCounterElem = document.getElementById("droneCounter")
-let multiElem = document.getElementById("miltiplier")
-let cheeseCounterElem = document.getElementById("cheeseCounter")
 let totalModifier = 1;
 
 let clickUpgrades = {
@@ -23,7 +12,7 @@ let clickUpgrades = {
   },
 
   sledgehammmers: {
-    price: 100,
+    price: 10,
     quantity: 0,
     multiplier: 5
   }
@@ -31,7 +20,7 @@ let clickUpgrades = {
 
 let automaticUpgrades = {
   rovers: {
-    price: 200,
+    price: 20,
     quantity: 0,
     multiplier: 20
   },
@@ -47,6 +36,7 @@ let automaticUpgrades = {
 // totalModifier!!!!!!!!!!!!!!!!!ANCHOR 
 
 function moonClick(){
+  
   
     moonTarget.cheese += totalModifier
   
@@ -71,6 +61,18 @@ function addMods(){
 
 
 function update(){
+  // help fix pls
+  let pickAxePriceElem = document.getElementById("axePrice")
+let pickAxeMultiplier = document.getElementById("axeMod")
+let sledgeMultiplier = document.getElementById("sledgeMod")
+let roverMultiplier = document.getElementById("roverMod")
+let droneMultiplier = document.getElementById("droneMod")
+let pickaxeCounterElem = document.getElementById("pickAxeCounter")
+let sledgeCounterElem = document.getElementById("sledgeCounter")
+let roverCounterElem = document.getElementById("roverCounter")
+let droneCounterElem = document.getElementById("droneCounter")
+let multiElem = document.getElementById("miltiplier")
+let cheeseCounterElem = document.getElementById("cheeseCounter")
   cheeseCounterElem.innerHTML = moonTarget.cheese
   pickaxeCounterElem.innerText = clickUpgrades.pickaxes.quantity
   sledgeCounterElem.innerText = clickUpgrades.sledgehammmers.quantity
@@ -90,12 +92,13 @@ function update(){
 function buyPickAxe(){
   if(clickUpgrades.pickaxes.price <= moonTarget.cheese){
     clickUpgrades.pickaxes.quantity++
-    moonTarget.item.push(clickUpgrades.pickaxes)
+    totalModifier++
+    // moonTarget.item.push(clickUpgrades.pickaxes)
     moonTarget.cheese -= clickUpgrades.pickaxes.price
     clickUpgrades.pickaxes.price += 10
     
     
-    addMods()
+    // addMods()
     update();
 
     
@@ -114,17 +117,19 @@ function buyPickAxe(){
 function buySledge(){
   if(clickUpgrades.sledgehammmers.price <= moonTarget.cheese){
     clickUpgrades.sledgehammmers.quantity++
-    moonTarget.item.push(clickUpgrades.sledgehammmers)
+    totalModifier += clickUpgrades.sledgehammmers.multiplier
+    
+    // moonTarget.item.push(clickUpgrades.sledgehammmers)
     moonTarget.cheese -= clickUpgrades.sledgehammmers.price
     clickUpgrades.sledgehammmers.price += 20
-    addMods()
+    // addMods()
     update()
   }
 }
 function buyRover(){
   if(automaticUpgrades.rovers.price <= moonTarget.cheese){
     automaticUpgrades.rovers.quantity++
-    moonTarget.item.push(automaticUpgrades.rovers)
+    // moonTarget.item.push(automaticUpgrades.rovers)
     moonTarget.cheese -= automaticUpgrades.rovers.price
     automaticUpgrades.rovers.price += 50
     setInterval(() => {
