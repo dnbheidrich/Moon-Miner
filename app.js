@@ -71,7 +71,7 @@ let pickaxeCounterElem = document.getElementById("pickAxeCounter")
 let sledgeCounterElem = document.getElementById("sledgeCounter")
 let roverCounterElem = document.getElementById("roverCounter")
 let droneCounterElem = document.getElementById("droneCounter")
-let multiElem = document.getElementById("miltiplier")
+let multiElem = document.getElementById("multiplier")
 let cheeseCounterElem = document.getElementById("cheeseCounter")
   cheeseCounterElem.innerHTML = moonTarget.cheese
   pickaxeCounterElem.innerText = clickUpgrades.pickaxes.quantity
@@ -82,6 +82,7 @@ let cheeseCounterElem = document.getElementById("cheeseCounter")
   sledgeMultiplier.innerText = clickUpgrades.sledgehammmers.multiplier
   droneMultiplier.innerText = automaticUpgrades.drone.multiplier
   roverMultiplier.innerText = automaticUpgrades.rovers.multiplier
+  multiElem.innerText = totalModifier
   // pickAxePriceElem.innerText = clickUpgrades.pickaxes.price
   achievements()
 
@@ -156,8 +157,12 @@ function buyDrone(){
   }
 }
  function achievements(){
-   if(moonTarget.cheese == 1000000)
-   alert("Congrats!")
+   if(moonTarget.cheese == 1000000){
+
+     alert("Congrats!")
+   }
+
+
  }
 
 
