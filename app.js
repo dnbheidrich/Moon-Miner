@@ -12,7 +12,7 @@ let clickUpgrades = {
   },
 
   sledgehammmers: {
-    price: 10,
+    price: 100,
     quantity: 0,
     multiplier: 5
   }
@@ -20,7 +20,7 @@ let clickUpgrades = {
 
 let automaticUpgrades = {
   rovers: {
-    price: 20,
+    price: 200,
     quantity: 0,
     multiplier: 20
   },
