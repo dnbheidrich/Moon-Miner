@@ -63,6 +63,9 @@ function addMods(){
 function update(){
   // help fix pls
   let pickAxePriceElem = document.getElementById("axePrice")
+  let pickAxePriceElem = document.getElementById("hammerPrice")
+  let pickAxePriceElem = document.getElementById("roverPrice")
+  let pickAxePriceElem = document.getElementById("dronePrice")
 let pickAxeMultiplier = document.getElementById("axeMod")
 let sledgeMultiplier = document.getElementById("sledgeMod")
 let roverMultiplier = document.getElementById("roverMod")
@@ -83,7 +86,10 @@ let cheeseCounterElem = document.getElementById("cheeseCounter")
   droneMultiplier.innerText = automaticUpgrades.drone.multiplier
   roverMultiplier.innerText = automaticUpgrades.rovers.multiplier
   multiElem.innerText = totalModifier
-  // pickAxePriceElem.innerText = clickUpgrades.pickaxes.price
+  pickAxePriceElem.innerText = clickUpgrades.pickaxes.price
+  sledgehammerPriceElem.innerText = clickUpgrades.sledgehammmers.price
+  roverPriceElem.innerText = automaticUpgrades.rovers.price
+  dronePriceElem.innerText = automaticUpgrades.drone.price
   achievements()
 
   
