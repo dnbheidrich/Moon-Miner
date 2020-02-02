@@ -28,7 +28,7 @@ let automaticUpgrades = {
   drone: {
     price: 350,
     quantity: 0,
-    multiplier: 30
+    multiplier: 50
   }
 };
 
