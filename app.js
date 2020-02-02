@@ -32,33 +32,23 @@ let automaticUpgrades = {
   }
 };
 
-
 // totalModifier!!!!!!!!!!!!!!!!!ANCHOR 
-
 function moonClick(){
-  
-  
-    moonTarget.cheese += totalModifier
-  
-  
+  moonTarget.cheese += totalModifier
   update()
+  
+  
   
 }
 
-
 function addMods(){
-  
   for(let i = 0; i < moonTarget.item.length; i++){
-   totalModifier += moonTarget.item[i].multiplier
+    totalModifier += moonTarget.item[i].multiplier
   }
-  
   console.log(totalModifier)
   update()
   return totalModifier
- 
-  }
-
-
+}
 
 function update(){
   // help fix pls
@@ -95,7 +85,6 @@ let cheeseCounterElem = document.getElementById("cheeseCounter")
   
 }
 
-
 function buyPickAxe(){
   if(clickUpgrades.pickaxes.price <= moonTarget.cheese){
     clickUpgrades.pickaxes.quantity++
@@ -106,21 +95,10 @@ function buyPickAxe(){
     
     
     // addMods()
-    update();
-
-    
-    
-    
-    
-     
-    
-    
-  
-    
-    
+    update();    
   }
-
 }
+
 function buySledge(){
   if(clickUpgrades.sledgehammmers.price <= moonTarget.cheese){
     clickUpgrades.sledgehammmers.quantity++
@@ -133,6 +111,7 @@ function buySledge(){
     update()
   }
 }
+
 function buyRover(){
   if(automaticUpgrades.rovers.price <= moonTarget.cheese){
     automaticUpgrades.rovers.quantity++
@@ -148,6 +127,7 @@ function buyRover(){
 
   }
 }
+
 function buyDrone(){
   if(automaticUpgrades.drone.price <= moonTarget.cheese){
     automaticUpgrades.drone.quantity++
@@ -162,7 +142,8 @@ function buyDrone(){
     update()
   }
 }
- function achievements(){
+
+function achievements(){
    if(moonTarget.cheese == 1000000){
 
      alert("Congrats!")
