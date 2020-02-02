@@ -82,8 +82,8 @@ let cheeseCounterElem = document.getElementById("cheeseCounter")
   sledgeMultiplier.innerText = clickUpgrades.sledgehammmers.multiplier
   droneMultiplier.innerText = automaticUpgrades.drone.multiplier
   roverMultiplier.innerText = automaticUpgrades.rovers.multiplier
-  pickAxePriceElem.innerText = clickUpgrades.pickaxes.price
-  
+  // pickAxePriceElem.innerText = clickUpgrades.pickaxes.price
+  achievements()
 
   
 }
@@ -155,6 +155,9 @@ function buyDrone(){
     update()
   }
 }
-
+ function achievements(){
+   if(moonTarget.cheese == 1000000)
+   alert("Congrats!")
+ }
 
 
