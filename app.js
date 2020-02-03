@@ -67,11 +67,11 @@ let roverCounterElem = document.getElementById("roverCounter")
 let droneCounterElem = document.getElementById("droneCounter")
 let multiElem = document.getElementById("multiplier")
 let cheeseCounterElem = document.getElementById("cheeseCounter")
-  cheeseCounterElem.innerHTML = moonTarget.cheese
-  pickaxeCounterElem.innerText = clickUpgrades.pickaxes.quantity
-  sledgeCounterElem.innerText = clickUpgrades.sledgehammmers.quantity
-  roverCounterElem.innerText = automaticUpgrades.rovers.quantity
-  droneCounterElem.innerText = automaticUpgrades.drone.quantity
+cheeseCounterElem.innerHTML = moonTarget.cheese
+pickaxeCounterElem.innerText = clickUpgrades.pickaxes.quantity
+sledgeCounterElem.innerText = clickUpgrades.sledgehammmers.quantity
+roverCounterElem.innerText = automaticUpgrades.rovers.quantity
+droneCounterElem.innerText = automaticUpgrades.drone.quantity
   pickAxeMultiplier.innerText = clickUpgrades.pickaxes.multiplier
   sledgeMultiplier.innerText = clickUpgrades.sledgehammmers.multiplier
   droneMultiplier.innerText = automaticUpgrades.drone.multiplier
@@ -82,7 +82,7 @@ let cheeseCounterElem = document.getElementById("cheeseCounter")
   roverPriceElem.innerText = automaticUpgrades.rovers.price
   dronePriceElem.innerText = automaticUpgrades.drone.price
   achievements()
-
+  
   
 }
 
@@ -116,7 +116,7 @@ function buySledge(){
 function buyRover(){
   if(automaticUpgrades.rovers.price <= moonTarget.cheese){
     automaticUpgrades.rovers.quantity++
-  //  moonTarget.item.push(automaticUpgrades.rovers)
+    //  moonTarget.item.push(automaticUpgrades.rovers)
     moonTarget.cheese -= automaticUpgrades.rovers.price
     automaticUpgrades.rovers.price += 50
     update()
@@ -125,7 +125,7 @@ function buyRover(){
       update()
     }, 3000)
     update()
-
+    
   }
 }
 
@@ -145,12 +145,21 @@ function buyDrone(){
 }
 
 function achievements(){
-   if(moonTarget.cheese == 1000000){
+  if(moonTarget.cheese == 1000000){
+    
+    alert("Congrats!")
+  }
+  
+  
+}
 
-     alert("Congrats!")
-   }
+let moonTargetElem = document.getElementById("moon")
+function mDown() {
+ document.getElementById("moon").style.color = "black"
+}
 
-
- }
-
+function mUp() {
+  
+document.getElementById("moon").style.color = "white"
+}
 
