@@ -116,11 +116,12 @@ function buySledge(){
 function buyRover(){
   if(automaticUpgrades.rovers.price <= moonTarget.cheese){
     automaticUpgrades.rovers.quantity++
-    // moonTarget.item.push(automaticUpgrades.rovers)
+  //  moonTarget.item.push(automaticUpgrades.rovers)
     moonTarget.cheese -= automaticUpgrades.rovers.price
     automaticUpgrades.rovers.price += 50
+    update()
     setInterval(() => {
-      // moonTarget.cheese += automaticUpgrades.drone.multiplier
+      moonTarget.cheese += automaticUpgrades.rovers.multiplier
       update()
     }, 3000)
     update()
@@ -134,7 +135,7 @@ function buyDrone(){
     moonTarget.cheese -= automaticUpgrades.drone.price
     automaticUpgrades.drone.price += 100
     update()
-    moonTarget.item.push(automaticUpgrades.drone)
+    // moonTarget.item.push(automaticUpgrades.drone)
     setInterval(() => {
       moonTarget.cheese += automaticUpgrades.drone.multiplier
       update()
