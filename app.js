@@ -2,6 +2,7 @@ let moonTarget ={
  cheese : 0,
  item: [],
 }
+
 let totalModifier = 1;
 
 let clickUpgrades = {
