@@ -52,7 +52,7 @@ function addMods(){
 }
 
 function update(){
-  // help fix pls
+  // help fix pls 
   let pickAxePriceElem = document.getElementById("axePrice")
   let sledgehammerPriceElem = document.getElementById("hammerPrice")
   let roverPriceElem = document.getElementById("roverPrice")
@@ -67,21 +67,23 @@ let roverCounterElem = document.getElementById("roverCounter")
 let droneCounterElem = document.getElementById("droneCounter")
 let multiElem = document.getElementById("multiplier")
 let cheeseCounterElem = document.getElementById("cheeseCounter")
-cheeseCounterElem.innerHTML = moonTarget.cheese
-pickaxeCounterElem.innerText = clickUpgrades.pickaxes.quantity
-sledgeCounterElem.innerText = clickUpgrades.sledgehammmers.quantity
-roverCounterElem.innerText = automaticUpgrades.rovers.quantity
-droneCounterElem.innerText = automaticUpgrades.drone.quantity
-  pickAxeMultiplier.innerText = clickUpgrades.pickaxes.multiplier
-  sledgeMultiplier.innerText = clickUpgrades.sledgehammmers.multiplier
-  droneMultiplier.innerText = automaticUpgrades.drone.multiplier
-  roverMultiplier.innerText = automaticUpgrades.rovers.multiplier
-  multiElem.innerText = totalModifier
-  pickAxePriceElem.innerText = clickUpgrades.pickaxes.price
-  sledgehammerPriceElem.innerText = clickUpgrades.sledgehammmers.price
-  roverPriceElem.innerText = automaticUpgrades.rovers.price
-  dronePriceElem.innerText = automaticUpgrades.drone.price
-  achievements()
+cheeseCounterElem.innerHTML = moonTarget.cheese.toString()
+pickaxeCounterElem.innerText = clickUpgrades.pickaxes.quantity.toString()
+sledgeCounterElem.innerText = clickUpgrades.sledgehammmers.quantity.toString()
+roverCounterElem.innerText = automaticUpgrades.rovers.quantity.toString()
+droneCounterElem.innerText = automaticUpgrades.drone.quantity.toString()
+pickAxeMultiplier.innerText = clickUpgrades.pickaxes.multiplier.toString()
+sledgeMultiplier.innerText = clickUpgrades.sledgehammmers.multiplier.toString()
+droneMultiplier.innerText = automaticUpgrades.drone.multiplier.toString()
+roverMultiplier.innerText = automaticUpgrades.rovers.multiplier.toString()
+multiElem.innerText = totalModifier.toString()
+pickAxePriceElem.innerText = clickUpgrades.pickaxes.price.toString()
+sledgehammerPriceElem.innerText = clickUpgrades.sledgehammmers.price.toString()
+roverPriceElem.innerText = automaticUpgrades.rovers.price.toString()
+dronePriceElem.innerText = automaticUpgrades.drone.price.toString()
+
+achievements()
+
   
   
 }
@@ -145,7 +147,7 @@ function buyDrone(){
 }
 
 function achievements(){
-  if(moonTarget.cheese == 1000000){
+  if(moonTarget.cheese == 100000){
     
     alert("Congrats!")
   }
