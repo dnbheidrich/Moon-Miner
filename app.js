@@ -23,7 +23,7 @@ let automaticUpgrades = {
   rovers: {
     price: 200,
     quantity: 0,
-    multiplier: 20
+    multiplier: 30
   },
 
   drone: {
@@ -120,10 +120,9 @@ function buyRover(){
     moonTarget.cheese -= automaticUpgrades.rovers.price
     automaticUpgrades.rovers.price += 50
     setInterval(() => {
-      moonTarget.cheese += automaticUpgrades.drone.multiplier
+      // moonTarget.cheese += automaticUpgrades.drone.multiplier
       update()
     }, 3000)
-    
     update()
 
   }
